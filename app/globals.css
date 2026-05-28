@@ -13,11 +13,11 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
   font-family: var(--font-sans), 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1C1C1A;
 }
