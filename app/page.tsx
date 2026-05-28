@@ -8,10 +8,10 @@ export default function Home() {
           STREVIUS <span className="font-light text-[#888]">GROUP</span>
         </div>
         <ul className="flex gap-9 list-none">
-          <li><a href="#" className="text-[15px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Studio</a></li>
-          <li><a href="#" className="text-[15px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Work</a></li>
-          <li><a href="#" className="text-[15px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Services</a></li>
-          <li><a href="#" className="text-[15px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Blog</a></li>
+          <li><a href="#" className="text-[18px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Studio</a></li>
+          <li><a href="#" className="text-[18px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Work</a></li>
+          <li><a href="#" className="text-[18px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Services</a></li>
+          <li><a href="#" className="text-[18px] text-[#444] tracking-[0.08em] uppercase font-normal hover:text-[#1A1A1A] transition-colors">Blog</a></li>
         </ul>
         <a href="#" className="text-[13px] text-[#1A1A1A] tracking-[0.08em] uppercase font-medium border-b border-[#1A1A1A] pb-px hover:opacity-60 transition-opacity">
           Contact →
