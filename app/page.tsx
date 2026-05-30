@@ -1,8 +1,14 @@
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-[#1C1C1A] flex flex-col font-sans">
+  const links = [
+    { label: 'TWO Docs', url: 'https://www.two.so' },
+    { label: 'Aegos Intel', url: 'https://www.aegosintel.com' },
+    { label: 'Story Brew', url: 'https://storybrew.online' },
+  ]
 
-      {/* Nav */}
+  return (
+    <main className="min-h-screen bg-[#0D0D0C] flex flex-col font-sans">
+
+      {/* Nav — untouched */}
       <nav className="flex items-center justify-between px-11 py-7">
         <div className="text-[15px] font-medium tracking-[0.12em] uppercase text-[#EDE9E1]">
           STREVIUS <span className="font-light text-[#555]">GROUP</span>
@@ -18,35 +24,53 @@ export default function Home() {
         </a>
       </nav>
 
-      {/* Hero */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center px-16 pb-16">
-        <h1 className="font-serif text-[96px] font-normal leading-[1.0] text-[#EDE9E1] tracking-[-0.02em]">
-          The group that<br />
-          <em>builds what lasts.</em>
-        </h1>
-        <p className="font-sans text-[17px] font-light text-[#777] max-w-[420px] leading-[1.65] mt-6">
-          Digital, media, and real-world assets. Built to compound. Starting small, growing with intention.
-        </p>
-        <div className="flex items-center gap-8 mt-10">
-          <a href="#" className="text-[12px] font-medium tracking-[0.06em] uppercase bg-[#EDE9E1] text-[#1C1C1A] px-7 py-3 rounded-full hover:opacity-80 transition-opacity">
-            Our Studio →
-          </a>
-          <a href="#" className="text-[12px] font-light tracking-[0.06em] uppercase text-[#555] border-b border-[#333] pb-px hover:text-[#EDE9E1] transition-colors">
-            View Work ↗
-          </a>
-        </div>
-      </div>
+      {/* Hero — two columns */}
+      <div className="flex-1 flex items-center px-11 pb-24 pt-8 gap-16">
 
-      {/* Footer strip */}
-      <div className="flex items-center justify-between px-11 py-5 border-t border-white/[0.07]">
-        <span className="text-[11px] text-[#444] tracking-[0.06em] uppercase">strevius.com</span>
-        <div className="flex gap-2.5">
-          {['One Peak Two', 'Story Brew', 'Study Brew'].map((tag) => (
-            <span key={tag} className="text-[10px] text-[#444] border border-white/[0.1] px-3 py-1 rounded-full tracking-[0.07em] uppercase">
-              {tag}
-            </span>
+        {/* Left column: headline */}
+        <div className="flex-1 flex flex-col justify-center max-w-[600px]">
+          <h1 className="font-serif text-[88px] font-normal leading-[1.0] text-[#EDE9E1] tracking-[-0.02em]">
+            The group that<br />
+            <em>builds what lasts.</em>
+          </h1>
+          <p className="font-sans text-[17px] font-light text-[#777] max-w-[400px] leading-[1.65] mt-6">
+            Digital, media, and real-world assets. Built to compound. Starting small, growing with intention.
+          </p>
+          <div className="flex items-center gap-8 mt-10">
+            <a href="#" className="text-[12px] font-medium tracking-[0.06em] uppercase bg-[#EDE9E1] text-[#0D0D0C] px-7 py-3 rounded-full hover:opacity-80 transition-opacity">
+              Our Studio →
+            </a>
+            <a href="#" className="text-[12px] font-light tracking-[0.06em] uppercase text-[#555] border-b border-[#333] pb-px hover:text-[#EDE9E1] transition-colors">
+              View Work ↗
+            </a>
+          </div>
+        </div>
+
+        {/* Right column: links */}
+        <div className="flex flex-col justify-center w-[340px] shrink-0">
+          {links.map((link, i) => (
+            <a
+              key={link.label}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between py-5 border-b border-white/[0.07] first:border-t first:border-white/[0.07] hover:border-white/[0.15] transition-colors"
+            >
+              <span className="text-[17px] font-light text-[#EDE9E1] tracking-[-0.01em] group-hover:opacity-70 transition-opacity">
+                {link.label}
+              </span>
+              <span className="text-[#555] group-hover:text-[#EDE9E1] transition-colors text-[15px]">
+                ↗
+              </span>
+            </a>
           ))}
         </div>
+
+      </div>
+
+      {/* Footer strip — pills removed */}
+      <div className="flex items-center justify-between px-11 py-5 border-t border-white/[0.07]">
+        <span className="text-[11px] text-[#444] tracking-[0.06em] uppercase">strevius.com</span>
         <div className="flex items-center gap-1.5 text-[11px] text-[#444] tracking-[0.06em] uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-[#EDE9E1] inline-block"></span>
           Est. 2025
