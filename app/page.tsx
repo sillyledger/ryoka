@@ -28,10 +28,10 @@ export default function Home() {
         </p>
         <div className="flex items-center gap-8 mt-10">
           <a href="#" className="text-[12px] font-medium tracking-[0.06em] uppercase bg-[#EDE9E1] text-[#1C1C1A] px-7 py-3 rounded-full hover:opacity-80 transition-opacity">
-            Investment Thesis →
+            Investment Thesis
           </a>
           <a href="#" className="text-[12px] font-light tracking-[0.06em] uppercase text-[#555] border-b border-[#333] pb-px hover:text-[#EDE9E1] transition-colors">
-            View Work ↗
+            View Work
           </a>
         </div>
       </div>
