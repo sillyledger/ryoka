@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ body {
 }
 
 body {
-  font-family: var(--font-sans), Helvetica, Arial, sans-serif;
+  font-family: 'Geist', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1c1c1e;
