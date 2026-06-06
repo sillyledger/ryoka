@@ -17,9 +17,14 @@ export default function About() {
           Ryoka is a small, independent group founded in 2025. We build internet companies, make micro-acquisitions, and run experiments across digital assets.
         </p>
 
-        <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#888', maxWidth: '680px' }}>
+        <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#888', maxWidth: '680px', marginBottom: '120px' }}>
           We are founder-led, independently held, and operating quietly for the long term. No outside mandates, no quarterly pressure. Just patient capital and deliberate ownership.
         </p>
+
+        <div style={{ borderTop: '0.5px solid #2a2a2a', paddingTop: '60px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <p style={{ fontSize: '16px', color: '#555' }}>Want to talk? Acquisitions, partnerships, or ideas.</p>
+          <a href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '2px solid #E8C840', paddingBottom: '2px' }}>p@ryoka.xyz</a>
+        </div>
       </div>
     </main>
   )
