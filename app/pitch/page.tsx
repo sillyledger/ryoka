@@ -22,9 +22,8 @@ export default function Pitch() {
       </div>
 
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
-        <hr style={{ border: 'none', borderTop: '0.5px solid #2a2a2a', marginBottom: '40px' }}/>
 
-        <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.12em', marginBottom: '0' }}>What we look for</p>
+        <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.12em', marginBottom: '0', paddingBottom: '24px', borderBottom: '0.5px solid #2a2a2a' }}>What we look for</p>
 
         {[
           { num: '01', title: 'Cash flow or a clear path to it', body: 'We only acquire what generates or can credibly generate returns. No speculative plays without a route to profitability.' },
@@ -32,22 +31,22 @@ export default function Pitch() {
           { num: '03', title: 'A long holding horizon', body: 'We are not in the business of flipping. Every acquisition is made with the intention of holding for years, not months.' },
           { num: '04', title: 'Small and operated', body: 'We are most interested in businesses under $500k ARR that are owner-operated and looking for a good home, not an auction.' },
         ].map((item, i, arr) => (
-          <div key={item.num} style={{ display: 'flex', alignItems: 'flex-start', borderTop: '0.5px solid #2a2a2a', borderBottom: i === arr.length - 1 ? '0.5px solid #2a2a2a' : 'none' }}>
+          <div key={item.num} style={{ display: 'flex', alignItems: 'flex-start', borderBottom: '0.5px solid #2a2a2a' }}>
             <span style={{ fontSize: '11px', color: '#444', letterSpacing: '0.12em', padding: '28px 0', width: '60px', flexShrink: 0 }}>{item.num}</span>
             <span style={{ fontSize: '20px', fontWeight: 500, color: '#f0f0f0', padding: '28px 40px 28px 0', width: '260px', flexShrink: 0, lineHeight: '1.2' }}>{item.title}</span>
             <span style={{ fontSize: '14px', color: '#555', lineHeight: '1.7', padding: '30px 0', flex: 1 }}>{item.body}</span>
           </div>
         ))}
 
-        <hr style={{ border: 'none', borderTop: '0.5px solid #2a2a2a', margin: '60px 0 40px' }}/>
-
-        <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.12em', marginBottom: '24px' }}>How to reach us</p>
-        <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4', maxWidth: '680px', marginBottom: '16px' }}>
-          Send us a short note. No deck required.
-        </p>
-        <p style={{ fontSize: '17px', lineHeight: '28px', fontWeight: 300, color: '#666', maxWidth: '580px' }}>
-          Tell us what you built, how it makes money, and why you are considering a sale or partnership. We will respond within a week.
-        </p>
+        <div style={{ marginTop: '60px' }}>
+          <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.12em', marginBottom: '24px' }}>How to reach us</p>
+          <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4', maxWidth: '680px', marginBottom: '16px' }}>
+            Send us a short note. No deck required.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '28px', fontWeight: 300, color: '#666', maxWidth: '580px' }}>
+            Tell us what you built, how it makes money, and why you are considering a sale or partnership. We will respond within a week.
+          </p>
+        </div>
 
         <div style={{ borderTop: '0.5px solid #2a2a2a', marginTop: '60px', paddingTop: '60px', paddingBottom: '80px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <p style={{ fontSize: '16px', color: '#555' }}>Ready to talk? Reach out directly.</p>
