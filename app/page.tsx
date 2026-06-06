@@ -24,7 +24,7 @@ export default function Home() {
       {/* Second section */}
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '120px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Our Approach</p>
-        <p style={{ fontSize: '24px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4' }}>
+        <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4' }}>
           We are independent, founder-led, and early. Every asset we build or acquire is held with a long-term horizon in mind. This is not a sprint. We are laying the groundwork for something that compounds quietly over decades.
         </p>
       </div>
