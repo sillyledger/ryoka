@@ -3,7 +3,12 @@ export default function Home() {
     <main style={{ minHeight: '100vh', backgroundColor: '#1c1c1e', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 50px 0' }}>
         <span style={{ fontSize: '36px', fontWeight: 900, color: '#f0f0f0', letterSpacing: '-0.03em' }}>ryoka</span>
-        <a href="mailto:p@ryoka.xyz" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '2px solid #E8C840', paddingBottom: '2px' }}>p@ryoka.xyz</a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
+          <a href="/studio" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>Studio</a>
+          <a href="/pitch" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>Pitch</a>
+          <a href="/about" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>About</a>
+          <a href="mailto:p@ryoka.xyz" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '2px solid #E8C840', paddingBottom: '2px' }}>p@ryoka.xyz</a>
+        </div>
       </nav>
 
       {/* Hero */}
