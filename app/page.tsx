@@ -1,11 +1,11 @@
 export default function Home() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#1c1c1e', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
-      <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '24px 185px 0', fontSize: '13px', color: '#666' }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '24px 50px 0', fontSize: '13px', color: '#666' }}>
         <span>Welcome</span>
         <a href="#" style={{ color: '#666', textDecoration: 'none' }}>Contact</a>
       </nav>
-      <div style={{ padding: '118px 185px 0' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '118px 50px 0' }}>
         <h1 style={{ fontSize: '80px', fontWeight: 900, lineHeight: '1.0', letterSpacing: '-0.03em', color: '#f0f0f0', marginBottom: '50px' }}>
           /ryo-ka/
         </h1>
