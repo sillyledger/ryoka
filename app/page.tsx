@@ -17,7 +17,7 @@ export default function Home() {
           <span style={{ color: '#E8C840' }}>/</span>ryo-ka<span style={{ color: '#E8C840' }}>/</span>
         </h1>
         <p style={{ fontSize: '35px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4', marginBottom: '50px' }}>
-          We build internet companies, make micro-acquisitions, and run experiments across digital assets. Combining studio thinking with investor discipline. Pursuing durable, compounding ownership above all else.
+          We build internet companies, make micro-acquisitions, and run <a href="/studio" style={{ color: '#d4d4d4', textDecoration: 'none', borderBottom: '1px solid #555' }}>experiments</a> across digital assets. Combining studio thinking with investor discipline. Pursuing durable, compounding ownership above all else.
         </p>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
           <a href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '2px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em' }}>
