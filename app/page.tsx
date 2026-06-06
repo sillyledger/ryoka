@@ -25,7 +25,7 @@ export default function Home() {
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '120px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Our Approach</p>
         <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4' }}>
-          We are independent, founder-led, and early. Every asset we build or acquire is held with a long-term horizon in mind. This is not a sprint. We are laying the groundwork for something that compounds quietly over decades.
+          Most firms optimize for exits. We optimize for ownership. The longer we hold, the more we learn, and the better our next move becomes. We currently operate across a small number of owned properties. Software tools, content assets, and early-stage bets. Each is chosen for its potential to grow quietly and hold value over time.
         </p>
       </div>
     </main>
