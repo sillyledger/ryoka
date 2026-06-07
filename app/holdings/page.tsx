@@ -12,8 +12,7 @@ export default function Holdings() {
           The foundation of <span style={{ color: '#E8C840' }}>Ryoka.</span>
         </h1>
         <p style={{ fontSize: '35px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4', marginBottom: '50px' }}>
-          Our holdings represent businesses, software, digital assets, and operating companies that we have built, acquired, or accumulated over time. While each asset is unique, they share a common characteristic: the potential to create durable value through long-term ownership.
-        </p>
+          Our holdings represent businesses, software, digital assets, and operating companies that we have built, acquired, or accumulated over time.
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
           <a href="#holdings" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '2px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em' }}>
             Holdings
@@ -25,7 +24,7 @@ export default function Holdings() {
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '120px 50px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Our Approach</p>
         <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4', marginBottom: '35px' }}>
-          We favor assets with strong fundamentals, recurring economics, and opportunities for continued growth. Some are built internally from first principles. Others are acquired and stewarded for the long term. Together, they form a portfolio designed to compound value across market cycles.
+          While each asset is unique, they share a common characteristic: the potential to create durable value through long-term ownership. We favor assets with strong fundamentals, recurring economics, and opportunities for continued growth. Some are built internally from first principles. Others are acquired and stewarded for the long term. Together, they form a portfolio designed to compound value across market cycles.
         </p>
         <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4' }}>
           Unlike traditional investment firms, we are not focused on frequent exits or short-term optimization. We believe ownership is most powerful when measured in years and decades, not quarters.
