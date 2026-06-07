@@ -11,7 +11,7 @@ export default function Holdings() {
         <h1 style={{ fontSize: '80px', fontWeight: 900, lineHeight: '1.0', letterSpacing: '-0.03em', color: '#f0f0f0', marginBottom: '50px' }}>
           The foundation of <span style={{ color: '#E8C840' }}>Ryoka.</span>
         </h1>
-        <p style={{ fontSize: '30px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4', marginBottom: '50px' }}>
+        <p style={{ fontSize: '30px', lineHeight: '40px', fontWeight: 350, color: '#d4d4d4', marginBottom: '50px' }}>
           Our holdings represent businesses, software, digital assets, and operating companies that we have built, acquired, or accumulated over time. While each asset is unique, they share a common characteristic: the potential to create durable value through long-term ownership.
         </p>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
