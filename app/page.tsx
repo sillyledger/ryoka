@@ -163,6 +163,85 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Divider */}
+      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
+        <div style={{ borderTop: '0.5px solid #2a2a2c' }} />
+      </div>
+
+      {/* Reach Out */}
+      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
+        <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Reach Out</p>
+        <h2 style={{ fontSize: '52px', fontWeight: 900, color: '#f0f0f0', lineHeight: '1.05', letterSpacing: '-0.02em', marginBottom: '20px', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+          Let&apos;s talk<span style={{ color: '#E8C840' }}>.</span>
+        </h2>
+        <p style={{ fontSize: '18px', color: '#666', fontWeight: 300, lineHeight: '1.5', maxWidth: '520px', marginBottom: '60px' }}>
+          Whether you&apos;re looking to partner, sell a business, or just follow what we&apos;re building — the door is open.
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+
+          {/* Primary email — full width */}
+          <div style={{
+            gridColumn: 'span 2',
+            background: '#242426',
+            borderRadius: '10px',
+            padding: '28px',
+            border: '0.5px solid #2e2e30',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+            <div>
+              <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '10px' }}>General Enquiries</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span style={{ width: '6px', height: '6px', background: '#E8C840', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }} />
+                <a href="mailto:p@ryoka.xyz" style={{ fontSize: '20px', color: '#f0f0f0', fontWeight: 300, textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px' }}>
+                  p@ryoka.xyz
+                </a>
+              </div>
+            </div>
+            <a href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0 }}>
+              Send a message
+            </a>
+          </div>
+
+          {/* Acquisitions */}
+          <div style={{ background: '#242426', borderRadius: '10px', padding: '28px', border: '0.5px solid #2e2e30' }}>
+            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Acquisitions</p>
+            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300 }}>Selling a business or project?</p>
+            <div style={{ marginTop: '20px' }}>
+              <a
+                href="mailto:acquire@ryoka.xyz?subject=Acquisition Inquiry"
+                style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+              >
+                Get in touch
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Partnerships */}
+          <div style={{ background: '#242426', borderRadius: '10px', padding: '28px', border: '0.5px solid #2e2e30' }}>
+            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Partnerships</p>
+            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300 }}>Building something aligned?</p>
+            <div style={{ marginTop: '20px' }}>
+              <a
+                href="mailto:partern@ryoka.xyz?subject=Partnership"
+                style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+              >
+                Let&apos;s explore
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </main>
   )
 }
