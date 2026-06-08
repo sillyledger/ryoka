@@ -56,7 +56,11 @@ export default function Home() {
           <span style={{ color: '#E8C840' }}>/</span>ryo-ka<span style={{ color: '#E8C840' }}>/</span>
         </h1>
         <p style={{ fontSize: '35px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4', marginBottom: '50px' }}>
-          We're a permanent capital company that builds, acquires, and invests in exceptional assets across private and public markets. We pursue durable ownership, patient capital, and long-term value creation.
+          We&apos;re a permanent{' '}
+          <a href="https://www.ryoka.xyz/capital" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '1px' }}>capital</a>
+          {' '}company that builds, acquires, and invests in exceptional assets across private and public{' '}
+          <a href="https://www.ryoka.xyz/markets" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '1px' }}>markets</a>
+          . We pursue durable ownership, patient capital, and long-term value creation.
         </p>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
           <a href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em' }}>
@@ -104,13 +108,11 @@ export default function Home() {
               onMouseEnter={e => (e.currentTarget.style.borderColor = '#444')}
               onMouseLeave={e => (e.currentTarget.style.borderColor = '#2e2e30')}
             >
-              {/* Card header */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <span style={{ fontSize: '19px', fontWeight: 700, color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
                     {h.name}
                   </span>
-                  {/* Consistent arrow — SVG so it renders identically everywhere */}
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
                     <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -132,14 +134,8 @@ export default function Home() {
                   {h.initial}
                 </div>
               </div>
-
-              {/* Domain */}
               <p style={{ fontSize: '13px', color: '#555', marginBottom: '14px' }}>{h.domain}</p>
-
-              {/* Description */}
               <p style={{ fontSize: '16px', color: '#aaa', lineHeight: '1.55', fontWeight: 300 }}>{h.description}</p>
-
-              {/* Tags */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '20px' }}>
                 {h.tags.map((tag) => (
                   <span
