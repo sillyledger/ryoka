@@ -228,7 +228,7 @@ export default function Home() {
             <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300 }}>Building something aligned?</p>
             <div style={{ marginTop: '20px' }}>
               <a
-                href="mailto:partern@ryoka.xyz?subject=Partnership"
+                href="mailto:partner@ryoka.xyz?subject=Partnership"
                 style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
                 Let&apos;s explore
