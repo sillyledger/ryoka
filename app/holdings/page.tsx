@@ -151,10 +151,10 @@ export default function Holdings() {
 
         {/* Footer strip */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '60px' }}>
-          <p style={{ fontSize: '14px', fontWeight: 300, color: '#444', maxWidth: '520px', lineHeight: '1.8' }}>
+          <p style={{ fontSize: '18px', fontWeight: 300, color: '#666', maxWidth: '520px', lineHeight: '1.5' }}>
             We are always evaluating new opportunities. Ownership is most powerful when measured in years and decades, not quarters.
           </p>
-          <a href="mailto:acquire@ryoka.xyz" style={{ fontSize: '14px', color: '#E8C840', textDecoration: 'none', borderBottom: '0.5px solid #E8C840', paddingBottom: '2px', whiteSpace: 'nowrap' }}>
+          <a href="mailto:acquire@ryoka.xyz" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em', whiteSpace: 'nowrap', flexShrink: 0 }}>
             Acquisition inquiries
           </a>
         </div>
