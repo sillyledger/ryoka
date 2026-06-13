@@ -48,7 +48,7 @@ export default function Home() {
           . We pursue durable ownership, patient capital, and long-term value creation.
         </p>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
-          <a href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em' }}>
+          <a href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.08em' }}>
             About
           </a>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '48px' }}>
-          <a href="https://www.ryoka.xyz/holdings" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.08em' }}>
+          <a href="https://www.ryoka.xyz/holdings" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.08em' }}>
             View all holdings
           </a>
         </div>
@@ -144,7 +144,7 @@ export default function Home() {
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Reach Out</p>
         <h2 style={{ fontSize: '52px', fontWeight: 900, color: '#f0f0f0', lineHeight: '1.05', letterSpacing: '-0.02em', marginBottom: '20px', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
-          Let&apos;s talk<span style={{ color: '#E8C840' }}>.</span>
+          Let&apos;s talk.
         </h2>
         <p style={{ fontSize: '18px', color: '#666', fontWeight: 300, lineHeight: '1.5', maxWidth: '520px', marginBottom: '60px' }}>
           Whether you&apos;re looking to partner, sell a business, or just follow what we&apos;re building - the door is open.
@@ -165,13 +165,13 @@ export default function Home() {
             <div>
               <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '10px' }}>General Enquiries</p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span style={{ width: '6px', height: '6px', background: '#E8C840', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }} />
+                <span style={{ width: '6px', height: '6px', background: '#444', borderRadius: '50%', display: 'inline-block', flexShrink: 0 }} />
                 <a href="mailto:p@ryoka.xyz" style={{ fontSize: '20px', color: '#f0f0f0', fontWeight: 300, textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px' }}>
                   p@ryoka.xyz
                 </a>
               </div>
             </div>
-            <a href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #E8C840', paddingBottom: '2px', letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0 }}>
+            <a href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0 }}>
               Send a message
             </a>
           </div>
