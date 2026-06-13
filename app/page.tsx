@@ -9,9 +9,6 @@ export default function Home() {
       domain: 'two.so',
       description: 'The doc app built for iPad and Mac. Beautiful, focused writing for creatives, solo operators, and small teams.',
       tags: ['SaaS', 'B2B & B2C', 'In Beta'],
-      initial: '2',
-      iconBg: '#1c1c2e',
-      iconColor: '#8888ff',
       href: 'https://www.two.so',
     },
     {
@@ -19,29 +16,20 @@ export default function Home() {
       domain: 'aegosintel.com',
       description: 'Company intelligence and data platform. Structured business insights for operators and analysts.',
       tags: ['SaaS', 'B2B', 'In Progress'],
-      initial: 'A',
-      iconBg: '#E8C840',
-      iconColor: '#1c1c1e',
       href: 'https://aegosintel.com',
     },
     {
       name: 'Sorano',
       domain: 'sorano.space',
-      description: 'Live.',
-      tags: ['Live'],
-      initial: 'S',
-      iconBg: '#0a1f35',
-      iconColor: '#7aaee8',
+      description: 'Roadmap, changelog, and community votes for your product. Share what you are building, let users vote on what is next, publish a changelog when you ship.',
+      tags: ['SaaS', 'B2B', 'Startups', 'Live'],
       href: 'https://sorano.space',
     },
     {
       name: 'Tenkaro',
       domain: 'tenkaro.com',
-      description: 'In progress.',
-      tags: ['In Progress'],
-      initial: 'T',
-      iconBg: '#1a1a1a',
-      iconColor: '#aaa',
+      description: 'Domain monitoring tool. Track availability, expiry, and changes across the domains that matter to your business.',
+      tags: ['SaaS', 'B2B', 'B2C', 'In Progress'],
       href: 'https://tenkaro.com',
     },
   ]
@@ -94,31 +82,13 @@ export default function Home() {
               onMouseEnter={e => (e.currentTarget.style.borderColor = '#2a4a6a')}
               onMouseLeave={e => (e.currentTarget.style.borderColor = '#1a3050')}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ fontSize: '19px', fontWeight: 700, color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
-                    {h.name}
-                  </span>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-                    <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '8px',
-                  background: h.iconBg,
-                  color: h.iconColor,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: 800,
-                  fontSize: '16px',
-                  flexShrink: 0,
-                  fontFamily: 'Geist, Helvetica, Arial, sans-serif',
-                }}>
-                  {h.initial}
-                </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                <span style={{ fontSize: '19px', fontWeight: 700, color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+                  {h.name}
+                </span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+                  <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <p style={{ fontSize: '13px', color: '#446', marginBottom: '14px' }}>{h.domain}</p>
               <p style={{ fontSize: '16px', color: '#aaa', lineHeight: '1.55', fontWeight: 300 }}>{h.description}</p>
