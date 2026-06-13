@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 50px 0' }}>
       <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
         <img src="/ryoka-mark.svg" alt="Ryoka" style={{ height: '60px' }} />
-        <span style={{ fontSize: '28px', fontWeight: 900, letterSpacing: '-0.02em', color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+        <span style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.02em', color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
           <span style={{ color: '#E8C840' }}>/</span>ryo-ka<span style={{ color: '#E8C840' }}>/</span>
         </span>
       </Link>
@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link href="/markets" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>Markets</Link>
         <Link href="/capital" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>Capital</Link>
         <Link href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>About</Link>
-        <a href="mailto:p@ryoka.xyz" style={{ fontSize: '20px', color: '#666', textDecoration: 'none' }}>Contact</a>
+        <Link href="/contact" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>Contact</Link>
       </div>
     </nav>
   )
