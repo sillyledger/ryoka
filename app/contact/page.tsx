@@ -5,10 +5,21 @@ import Navbar from '../components/Navbar'
 export default function Contact() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#0D1821', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .c-section { padding-left: 24px !important; padding-right: 24px !important; }
+          .c-hero { padding-top: 80px !important; }
+          .c-hero h1 { font-size: 48px !important; }
+          .c-hero p { font-size: 19px !important; line-height: 30px !important; }
+          .c-general { flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; }
+          .c-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+
       <Navbar />
 
       {/* Hero */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '140px 50px 0' }}>
+      <div className="c-hero c-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '140px 50px 0' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Contact</p>
         <h1 style={{ fontSize: '80px', fontWeight: 900, lineHeight: '1.0', letterSpacing: '-0.03em', color: '#f0f0f0', marginBottom: '32px' }}>
           The door is open.
@@ -19,11 +30,11 @@ export default function Contact() {
       </div>
 
       {/* Cards */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
+      <div className="c-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Get in touch</p>
 
         {/* General email full width */}
-        <div style={{
+        <div className="c-general" style={{
           background: '#112233',
           borderRadius: '10px',
           padding: '28px',
@@ -48,7 +59,7 @@ export default function Contact() {
         </div>
 
         {/* 2x2 grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+        <div className="c-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
 
           <div style={{ background: '#112233', borderRadius: '10px', padding: '28px', border: '0.5px solid #1a3050' }}>
             <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Acquisitions</p>
