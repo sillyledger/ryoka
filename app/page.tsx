@@ -36,10 +36,27 @@ export default function Home() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#0D1821', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .home-hero { padding: 120px 24px 0 !important; }
+          .home-hero p { font-size: 24px !important; line-height: 36px !important; }
+          .home-hero-cta { margin-top: 48px !important; }
+          .home-section { padding-left: 24px !important; padding-right: 24px !important; }
+          .home-portfolio-grid { grid-template-columns: 1fr !important; }
+          .home-contact-grid { grid-template-columns: 1fr !important; }
+          .home-contact-top { flex-direction: column !important; gap: 20px !important; align-items: flex-start !important; }
+          .home-contact-top-link { align-self: flex-start; }
+          .home-approach { padding-top: 80px !important; padding-bottom: 80px !important; }
+          .home-approach p { font-size: 19px !important; line-height: 30px !important; }
+          .home-reach-h2 { font-size: 36px !important; }
+          .home-reach-p { font-size: 16px !important; }
+        }
+      `}</style>
+
       <Navbar />
 
       {/* Hero */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '250px 50px 0' }}>
+      <div className="home-hero home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '250px 50px 0' }}>
         <p style={{ fontSize: '35px', lineHeight: '50px', fontWeight: 300, color: '#d4d4d4', marginBottom: '50px' }}>
           We&apos;re a permanent{' '}
           <a href="https://www.ryoka.xyz/capital" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '1px' }}>capital</a>
@@ -47,7 +64,7 @@ export default function Home() {
           <a href="https://www.ryoka.xyz/markets" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '1px' }}>markets</a>
           . We pursue durable ownership, patient capital, and long-term value creation.
         </p>
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
+        <div className="home-hero-cta" style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '80px' }}>
           <a href="/about" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.08em' }}>
             About
           </a>
@@ -55,9 +72,9 @@ export default function Home() {
       </div>
 
       {/* Portfolio */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
+      <div className="home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Portfolio &amp; Holdings</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+        <div className="home-portfolio-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
           {holdings.map((h) => (
             <a
               key={h.name}
@@ -115,12 +132,12 @@ export default function Home() {
       </div>
 
       {/* Divider */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
+      <div className="home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
       {/* Our Approach */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '120px 50px 120px' }}>
+      <div className="home-approach home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '120px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Our Approach</p>
         <p style={{ fontSize: '25px', lineHeight: '35px', fontWeight: 300, color: '#d4d4d4', marginBottom: '35px' }}>
           Most firms optimize for exits. We optimize for ownership. The longer we hold, the more we learn, and the better our next move becomes. We currently operate across a small number of owned properties. Software tools, content assets, and early-stage bets. Each is chosen for its potential to grow quietly and hold value over time.
@@ -131,23 +148,23 @@ export default function Home() {
       </div>
 
       {/* Divider */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
+      <div className="home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '0 50px' }}>
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
       {/* Reach Out */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
+      <div className="home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Reach Out</p>
-        <h2 style={{ fontSize: '52px', fontWeight: 900, color: '#f0f0f0', lineHeight: '1.05', letterSpacing: '-0.02em', marginBottom: '20px', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+        <h2 className="home-reach-h2" style={{ fontSize: '52px', fontWeight: 900, color: '#f0f0f0', lineHeight: '1.05', letterSpacing: '-0.02em', marginBottom: '20px', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
           Let&apos;s talk.
         </h2>
-        <p style={{ fontSize: '18px', color: '#666', fontWeight: 300, lineHeight: '1.5', maxWidth: '520px', marginBottom: '60px' }}>
+        <p className="home-reach-p" style={{ fontSize: '18px', color: '#666', fontWeight: 300, lineHeight: '1.5', maxWidth: '520px', marginBottom: '60px' }}>
           Whether you&apos;re looking to partner, sell a business, or just follow what we&apos;re building - the door is open.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+        <div className="home-contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
 
-          <div style={{
+          <div className="home-contact-top" style={{
             gridColumn: 'span 2',
             background: '#112233',
             borderRadius: '10px',
@@ -166,7 +183,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <a href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0 }}>
+            <a className="home-contact-top-link" href="mailto:p@ryoka.xyz" style={{ fontSize: '16px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0 }}>
               Send a message
             </a>
           </div>
