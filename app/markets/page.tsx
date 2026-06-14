@@ -5,10 +5,23 @@ import Navbar from '../components/Navbar'
 export default function Markets() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#0D1821', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .m-section { padding-left: 24px !important; padding-right: 24px !important; }
+          .m-hero { padding-top: 80px !important; }
+          .m-hero h1 { font-size: 48px !important; }
+          .m-hero p { font-size: 19px !important; line-height: 30px !important; }
+          .m-row1 { grid-template-columns: 1fr !important; }
+          .m-row2 { grid-template-columns: 1fr !important; }
+          .m-approach p { font-size: 19px !important; line-height: 30px !important; }
+          .m-cta { flex-direction: column !important; gap: 24px !important; align-items: flex-start !important; }
+        }
+      `}</style>
+
       <Navbar />
 
       {/* Hero */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '140px 50px 0' }}>
+      <div className="m-hero m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '140px 50px 0' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Markets</p>
         <h1 style={{ fontSize: '80px', fontWeight: 900, lineHeight: '1.0', letterSpacing: '-0.03em', color: '#f0f0f0', marginBottom: '32px' }}>
           We trade our own book.
@@ -19,11 +32,11 @@ export default function Markets() {
       </div>
 
       {/* Allocation bento */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Allocation</p>
 
         {/* Row 1: Equities 2/3 + Futures 1/3 */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '12px', marginBottom: '12px' }}>
+        <div className="m-row1" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '12px', marginBottom: '12px' }}>
           <div style={{ background: '#112233', borderRadius: '10px', border: '0.5px solid #1a3050', padding: '28px', position: 'relative', overflow: 'hidden' }}>
             <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Equities</p>
             <p style={{ fontSize: '52px', fontWeight: 900, color: '#f0f0f0', letterSpacing: '-0.03em', lineHeight: '1', marginBottom: '12px' }}>60%</p>
@@ -43,7 +56,7 @@ export default function Markets() {
         </div>
 
         {/* Row 2: Crypto + Commodities + Forex */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
+        <div className="m-row2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
           <div style={{ background: '#112233', borderRadius: '10px', border: '0.5px solid #1a3050', padding: '28px', position: 'relative', overflow: 'hidden' }}>
             <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Crypto</p>
             <p style={{ fontSize: '36px', fontWeight: 900, color: '#f0f0f0', letterSpacing: '-0.03em', lineHeight: '1', marginBottom: '12px' }}>10%</p>
@@ -72,12 +85,12 @@ export default function Markets() {
       </div>
 
       {/* Divider */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
       {/* Our Approach */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-approach m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Our approach</p>
         <p style={{ fontSize: '25px', lineHeight: '38px', fontWeight: 300, color: '#d4d4d4', marginBottom: '35px' }}>
           We run proprietary strategies with internal capital. Every position is taken with a clear thesis and closed when that thesis no longer holds. We do not chase performance, react to noise, or optimise for appearance.
@@ -88,12 +101,12 @@ export default function Markets() {
       </div>
 
       {/* Divider */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
       {/* Outside Capital */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-approach m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>Outside capital</p>
         <p style={{ fontSize: '25px', lineHeight: '38px', fontWeight: 300, color: '#d4d4d4' }}>
           This is not a fund raise. It is a selective, relationship-driven arrangement for those who understand what Ryoka is building. A small allocation, up to 10% of the book, may be opened to aligned partners on a case-by-case basis.
@@ -101,12 +114,12 @@ export default function Markets() {
       </div>
 
       {/* Divider */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
+      <div className="m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 0' }}>
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
       {/* CTA */}
-      <div style={{ maxWidth: '980px', margin: '0 auto', padding: '40px 50px 120px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="m-cta m-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '40px 50px 120px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <p style={{ fontSize: '18px', fontWeight: 300, color: '#555', maxWidth: '480px', lineHeight: '1.5' }}>
           Interested in co-investing or learning more about how we operate in markets?
         </p>
