@@ -68,6 +68,7 @@ export default async function PostPage({
 
         {/* Content */}
         <div
+          className="ryoka-post-content"
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
           style={{ color: '#d4d4d4', fontSize: '17px', lineHeight: '1.85', fontWeight: 300 }}
         />
@@ -79,7 +80,7 @@ export default async function PostPage({
           .ryoka-post-content ul, .ryoka-post-content ol { padding-left: 20px; margin-bottom: 20px; }
           .ryoka-post-content li { margin-bottom: 8px; }
           .ryoka-post-content strong { color: #f0f0f0; font-weight: 600; }
-          .ryoka-post-content a { color: #6a9abf; text-decoration: underline; }
+          .ryoka-post-content a { color: #d4d4d4; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; }
           .ryoka-post-content blockquote { border-left: 2px solid #2a3a4a; padding-left: 20px; margin: 24px 0; color: #888; }
           .ryoka-post-content code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
           .ryoka-post-content pre { background: #111; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 24px 0; }
