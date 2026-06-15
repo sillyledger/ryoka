@@ -1,3 +1,5 @@
+export const revalidate = 0
+
 import { createClient } from '@supabase/supabase-js'
 import Navbar from '../../../components/Navbar'
 import Link from 'next/link'
