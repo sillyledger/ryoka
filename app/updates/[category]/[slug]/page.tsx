@@ -70,7 +70,7 @@ export default async function PostPage({
         <div
           className="ryoka-post-content"
           dangerouslySetInnerHTML={{ __html: post.content || '' }}
-          style={{ color: '#d4d4d4', fontSize: '17px', lineHeight: '1.85', fontWeight: 300 }}
+          style={{ color: '#d4d4d4', fontSize: '17px', lineHeight: '1.65', fontWeight: 300 }}
         />
 
         <style>{`
