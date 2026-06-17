@@ -1,11 +1,8 @@
 'use client'
-
 import Link from 'next/link'
 import { useState } from 'react'
-
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-
   const links = [
     { href: '/holdings', label: 'Holdings' },
     { href: '/markets', label: 'Markets' },
@@ -13,7 +10,7 @@ export default function Navbar() {
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
-
+  const externalLink = { href: 'https://www.sorano.space/ryoka', label: 'Ledger' }
   return (
     <>
       <style>{`
@@ -26,7 +23,6 @@ export default function Navbar() {
           .ryoka-hamburger { display: none !important; }
         }
       `}</style>
-
       <nav style={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -41,7 +37,6 @@ export default function Navbar() {
             Ryoka
           </span>
         </Link>
-
         {/* Desktop links */}
         <div className="ryoka-nav-links" style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
           {links.map(({ href, label }) => (
@@ -49,8 +44,10 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+          <a href={externalLink.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>
+            {externalLink.label}
+          </a>
         </div>
-
         {/* Hamburger */}
         <button
           className="ryoka-hamburger"
@@ -83,7 +80,6 @@ export default function Navbar() {
           }} />
         </button>
       </nav>
-
       {/* Mobile menu */}
       <div className="ryoka-mobile-menu" style={{
         display: open ? 'flex' : 'none',
@@ -102,6 +98,15 @@ export default function Navbar() {
             {label}
           </Link>
         ))}
+        
+          href={externalLink.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
+          style={{ fontSize: '22px', color: '#aaa', textDecoration: 'none', letterSpacing: '0.04em', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}
+        >
+          {externalLink.label}
+        </a>
       </div>
     </>
   )
