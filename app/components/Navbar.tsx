@@ -98,13 +98,7 @@ export default function Navbar() {
             {label}
           </Link>
         ))}
-        
-          href={externalLink.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => setOpen(false)}
-          style={{ fontSize: '22px', color: '#aaa', textDecoration: 'none', letterSpacing: '0.04em', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}
-        >
+        <a href={externalLink.href} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} style={{ fontSize: '22px', color: '#aaa', textDecoration: 'none', letterSpacing: '0.04em', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
           {externalLink.label}
         </a>
       </div>
