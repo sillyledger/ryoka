@@ -28,7 +28,7 @@ export default function Home() {
     {
       name: 'Study Brew',
       domain: 'studybrew.co',
-      description: '7:28 PMClaude responded: Study Brew is an English learning platform for B1–B2 learners, built around short audio stories with real characters and everyday situations.Study Brew is an English learning platform for B1–B2 learners, built around short audio stories with real characters and everyday situations. It includes a note-taking app designed specifically for language learners, letting them capture vocabulary and insights directly alongside the content they're studying.',
+      description: 'An English learning platform for B1\u2013B2 learners, built around short audio stories with real characters and everyday situations. Includes a note-taking app designed specifically for language learners.',
       tags: ['SaaS', 'B2C', 'In Progress'],
       href: 'https://studybrew.co',
     },
