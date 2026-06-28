@@ -26,11 +26,11 @@ export default function Home() {
       href: 'https://sorano.space',
     },
     {
-      name: 'Tenkaro',
-      domain: 'tenkaro.com',
-      description: 'Domain monitoring tool. Track availability, expiry, and changes across the domains that matter to your business.',
-      tags: ['SaaS', 'B2B', 'B2C', 'In Progress'],
-      href: 'https://tenkaro.com',
+      name: 'Study Brew',
+      domain: 'studybrew.co',
+      description: '7:28 PMClaude responded: Study Brew is an English learning platform for B1–B2 learners, built around short audio stories with real characters and everyday situations.Study Brew is an English learning platform for B1–B2 learners, built around short audio stories with real characters and everyday situations. It includes a note-taking app designed specifically for language learners, letting them capture vocabulary and insights directly alongside the content they're studying.',
+      tags: ['SaaS', 'B2C', 'In Progress'],
+      href: 'https://studybrew.co',
     },
   ]
 
