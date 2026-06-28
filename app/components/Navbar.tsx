@@ -7,6 +7,7 @@ export default function Navbar() {
     { href: '/holdings', label: 'Holdings' },
     { href: '/markets', label: 'Markets' },
     { href: '/capital', label: 'Capital' },
+     { href: '/updayes', label: 'Updates' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
