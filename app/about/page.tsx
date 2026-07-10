@@ -24,7 +24,7 @@ export default function About() {
           Small group.<br />Long game.
         </h1>
         <p style={{ fontSize: '25px', lineHeight: '38px', fontWeight: 300, color: '#d4d4d4' }}>
-          Ryoka is a small, independent group founded in 2025. We build internet companies, make micro-acquisitions, and run experiments across digital assets. We are based in London and Taipei.
+          Ryoka is a small, independent group founded in 2025. We build and operate digital products, and run experiments across the web. We are based in London and Taipei.
         </p>
       </div>
 
@@ -32,7 +32,7 @@ export default function About() {
         <div className="a-block" style={{ marginBottom: '80px' }}>
           <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '24px' }}>How we operate</p>
           <p style={{ fontSize: '25px', lineHeight: '38px', fontWeight: 300, color: '#d4d4d4' }}>
-            We are founder-led, independently held, and operating quietly for the long term. No outside mandates, no quarterly pressure. Just patient capital and deliberate ownership. Our builds, acquisitions, and experiments are funded by capital markets activity and revenue from the portfolio itself.
+            We are founder-led and independently held, building quietly for the long term. No outside mandates, no quarterly pressure &mdash; just focused work on products we own and run ourselves. Everything is funded by revenue from the portfolio itself.
           </p>
         </div>
         <div className="a-block">
