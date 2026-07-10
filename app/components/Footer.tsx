@@ -32,9 +32,10 @@ export default function Footer() {
       <div style={{ maxWidth: '980px', margin: '0 auto', padding: '60px 50px 40px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '40px', marginBottom: '60px' }}>
           <div style={{ flexShrink: 0 }}>
-            <a href="/" style={{ textDecoration: 'none' }}>
-              <span style={{ fontSize: '18px', fontWeight: 900, color: '#f0f0f0', letterSpacing: '-0.02em' }}>
-                <span style={{ color: '#E8C840' }}>/</span>ryoka<span style={{ color: '#E8C840' }}>/</span>
+            <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '14px', textDecoration: 'none' }}>
+              <img src="/ryoka-mark.svg?v=2" alt="Ryoka" style={{ height: '48px' }} />
+              <span style={{ fontSize: '22px', fontWeight: 900, letterSpacing: '-0.02em', color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
+                Ryoka
               </span>
             </a>
           </div>

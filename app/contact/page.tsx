@@ -25,7 +25,7 @@ export default function Contact() {
           The door is open.
         </h1>
         <p style={{ fontSize: '25px', lineHeight: '38px', fontWeight: 300, color: '#d4d4d4', maxWidth: '980px' }}>
-          We are a small team and we read everything. Whether you are looking to sell a business, co-invest, build something together, or just follow what we are doing, reach out directly.
+          We are a small team and we read everything. Whether you want to partner, share feedback on something we have built, or just follow what we are doing, reach out directly.
         </p>
       </div>
 
@@ -62,15 +62,6 @@ export default function Contact() {
         <div className="c-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
 
           <div style={{ background: '#112233', borderRadius: '10px', padding: '28px', border: '0.5px solid #1a3050' }}>
-            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Acquisitions</p>
-            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300, marginBottom: '20px' }}>Selling a business or project?</p>
-            <a href="mailto:p@ryoka.xyz?subject=Acquisition Inquiry" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              Get in touch
-              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
-          </div>
-
-          <div style={{ background: '#112233', borderRadius: '10px', padding: '28px', border: '0.5px solid #1a3050' }}>
             <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Partnerships</p>
             <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300, marginBottom: '20px' }}>Building something aligned?</p>
             <a href="mailto:p@ryoka.xyz?subject=Partnership" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
@@ -80,10 +71,19 @@ export default function Contact() {
           </div>
 
           <div style={{ background: '#112233', borderRadius: '10px', padding: '28px', border: '0.5px solid #1a3050' }}>
-            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Markets</p>
-            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300, marginBottom: '20px' }}>Interested in co-investing?</p>
-            <a href="mailto:p@ryoka.xyz?subject=Markets" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              Partner inquiries
+            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Product support</p>
+            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300, marginBottom: '20px' }}>Using one of our products?</p>
+            <a href="mailto:p@ryoka.xyz?subject=Support" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              Get help
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div style={{ background: '#112233', borderRadius: '10px', padding: '28px', border: '0.5px solid #1a3050' }}>
+            <p style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em', marginBottom: '12px' }}>Careers</p>
+            <p style={{ fontSize: '17px', color: '#d4d4d4', fontWeight: 300, marginBottom: '20px' }}>Want to build with us?</p>
+            <a href="mailto:p@ryoka.xyz?subject=Careers" style={{ fontSize: '13px', color: '#666', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              Say hello
               <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
           </div>
