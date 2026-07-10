@@ -5,13 +5,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const links = [
     { href: '/holdings', label: 'Holdings' },
-    { href: '/markets', label: 'Markets' },
-    { href: '/capital', label: 'Capital' },
-     { href: '/updates', label: 'Updates' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
-  const externalLink = { href: 'https://www.sorano.space/ryoka', label: 'Ledger' }
+  const externalLink = { href: 'https://www.ryokagroup.com', label: 'Ryoka Group' }
   return (
     <>
       <style>{`
@@ -45,8 +42,11 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <a href={externalLink.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em' }}>
+          <a href={externalLink.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', letterSpacing: '0.06em', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
             {externalLink.label}
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </a>
         </div>
         {/* Hamburger */}

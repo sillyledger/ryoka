@@ -9,8 +9,6 @@ export default function Footer() {
   ]
   const col2 = [
     { label: 'Holdings', href: '/holdings' },
-    { label: 'Markets', href: '/markets' },
-    { label: 'Capital', href: '/capital' },
   ]
   const col3 = [
     { label: 'Login', href: '/login' },
