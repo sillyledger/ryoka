@@ -25,7 +25,6 @@ export default function Footer() {
   return (
     <footer style={{
       backgroundColor: '#0D1821',
-      borderTop: '0.5px solid #1a2a3a',
       marginTop: '0',
       fontFamily: 'Geist, Helvetica, Arial, sans-serif',
     }}>
