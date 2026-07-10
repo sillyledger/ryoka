@@ -3,8 +3,8 @@ import './globals.css'
 import Footer from './components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Ryoka — Digital products studio',
-  description: 'Ryoka builds and operates a portfolio of digital products — software and tools crafted for creatives, operators, and small teams.',
+  title: 'Ryoka — Software products studio',
+  description: 'Ryoka builds and operates software products. Some are held for the long run, others run as experiments to test what is worth building next.',
 }
 
 export default function RootLayout({
