@@ -52,10 +52,10 @@ export default function Home() {
     },
     {
       name: 'Liyo',
-      domain: 'liyo.co',
+      domain: 'liyo.dev',
       stage: 'Experiments',
       status: 'parked',
-      href: 'https://liyo.co',
+      href: 'https://liyo.dev',
       updatedAt: '2026-04-02',
     },
   ]
