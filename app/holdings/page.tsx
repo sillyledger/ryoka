@@ -2,63 +2,93 @@
 
 import Navbar from '../components/Navbar'
 
+const STATUS_STYLES = {
+  live: { label: 'Live', color: '#5ac8a8' },
+  building: { label: 'Building', color: '#e0a458' },
+  parked: { label: 'Parked', color: '#666' },
+}
+
 export default function Holdings() {
-  const card = {
-    display: 'block',
-    background: '#112233',
-    borderRadius: '10px',
-    padding: '28px',
-    border: '0.5px solid #1a3050',
-    textDecoration: 'none',
-    transition: 'border-color 0.15s ease',
-  } as const
-
-  const tag = {
-    fontSize: '11px',
-    color: '#556',
-    border: '0.5px solid #1a3050',
-    borderRadius: '4px',
-    padding: '3px 9px',
-    letterSpacing: '0.05em',
-  } as const
-
   const holdings = [
-    { name: 'Sorano', domain: 'sorano.space', description: 'Roadmap, changelog, and community votes for your product. Share what you are building, let users vote on what is next, publish a changelog when you ship.', tags: ['SaaS', 'B2B', 'Startups', 'Live'], href: 'https://sorano.space', row: 1 },
-    { name: 'Aegos Intel', domain: 'aegosintel.com', description: 'Company intelligence and data platform. Structured business insights for operators and analysts.', tags: ['SaaS', 'B2B', 'In Progress'], href: 'https://aegosintel.com', row: 1 },
-    { name: 'TWO Docs', domain: 'two.so', description: 'The doc app built for iPad and Mac. Beautiful, focused writing for creatives and solo operators.', tags: ['SaaS', 'B2B & B2C', 'In Beta'], href: 'https://www.two.so', row: 2 },
-    { name: 'Kiroka', domain: 'kiroka.xyz', description: 'A curated directory of tools and products for indie builders and operators.', tags: ['Directory', 'Live'], href: 'https://app.kiroka.xyz', row: 2 },
-    { name: 'Study Brew', domain: 'studybrew.co', description: 'An English learning platform for B1\u2013B2 learners, built around short audio stories with real characters and everyday situations.', tags: ['SaaS', 'B2C', 'In Progress'], href: 'https://studybrew.co', row: 2 },
-    { name: 'KiraPulse', domain: 'kirapulse.com', description: 'Domain monitoring tool. Track availability, expiry, and changes across the domains that matter.', tags: ['SaaS', 'B2B', 'In Progress'], href: 'https://kirapulse.com', row: 3 },
-    { name: 'Liyo', domain: 'liyo.co', description: 'Studio and experiments arm. Building small internet projects on a hit-and-miss principle.', tags: ['Studio'], href: 'https://liyo.co', row: 3 },
-    { name: 'Strevius', domain: 'strevius.com', description: 'Studio and media group building services and brands across the web.', tags: ['Studio', 'Media'], href: 'https://strevius.com', row: 3 },
+    {
+      name: 'Sorano',
+      domain: 'sorano.space',
+      description: 'Roadmap, changelog, and community votes for your product. Share what you are building, let users vote on what is next, publish a changelog when you ship.',
+      stage: 'Shipping',
+      status: 'live',
+      href: 'https://sorano.space',
+      updatedAt: '2026-06-20',
+    },
+    {
+      name: 'TWO Docs',
+      domain: 'two.so',
+      description: 'The doc app built for iPad and Mac. Beautiful, focused writing for creatives and solo operators.',
+      stage: 'Shipping',
+      status: 'live',
+      href: 'https://www.two.so',
+      updatedAt: '2026-07-14',
+    },
+    {
+      name: 'Kiroka',
+      domain: 'kiroka.xyz',
+      description: 'A curated directory of tools and products for indie builders and operators.',
+      stage: 'Daily drip',
+      status: 'building',
+      href: 'https://app.kiroka.xyz',
+      updatedAt: '2026-07-15',
+    },
+    {
+      name: 'Aegos Intel',
+      domain: 'aegosintel.com',
+      description: 'Company intelligence and data platform. Structured business insights for operators and analysts.',
+      stage: 'In progress',
+      status: 'building',
+      href: 'https://aegosintel.com',
+      updatedAt: '2026-07-10',
+    },
+    {
+      name: 'Study Brew',
+      domain: 'studybrew.co',
+      description: 'An English learning platform for B1\u2013B2 learners, built around short audio stories with real characters and everyday situations.',
+      stage: 'In progress',
+      status: 'building',
+      href: 'https://studybrew.co',
+      updatedAt: '2026-05-15',
+    },
+    {
+      name: 'Strevius',
+      domain: 'strevius.com',
+      description: "Your company's operating memory. Strevius begins as a knowledge base and grows into the structured record of how your company runs.",
+      stage: 'Dashboard',
+      status: 'building',
+      href: 'https://strevius.com',
+      updatedAt: '2026-07-01',
+    },
+    {
+      name: 'KiraPulse',
+      domain: 'kirapulse.com',
+      description: 'Domain monitoring tool. Track availability, expiry, and changes across the domains that matter.',
+      stage: 'In progress',
+      status: 'building',
+      href: 'https://kirapulse.com',
+      updatedAt: '2026-06-10',
+    },
+    {
+      name: 'Liyo',
+      domain: 'liyo.dev',
+      description: 'Studio and experiments arm. Building small internet projects on a hit-and-miss principle.',
+      stage: 'Experiments',
+      status: 'parked',
+      href: 'https://liyo.dev',
+      updatedAt: '2026-04-02',
+    },
   ]
 
-  const Card = ({ h }: { h: (typeof holdings)[number] }) => (
-    <a
-      href={h.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={card}
-      onMouseEnter={e => (e.currentTarget.style.borderColor = '#2a4a6a')}
-      onMouseLeave={e => (e.currentTarget.style.borderColor = '#1a3050')}
-    >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-        <span style={{ fontSize: '19px', fontWeight: 700, color: '#f0f0f0' }}>{h.name}</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-      </div>
-      <p style={{ fontSize: '13px', color: '#555', marginBottom: '14px' }}>{h.domain}</p>
-      <p style={{ fontSize: '15px', color: '#aaa', lineHeight: '1.55', fontWeight: 300, marginBottom: '20px' }}>{h.description}</p>
-      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-        {h.tags.map(t => (
-          <span key={t} style={tag}>{t}</span>
-        ))}
-      </div>
-    </a>
-  )
-
-  const row1 = holdings.filter(h => h.row === 1)
-  const row2 = holdings.filter(h => h.row === 2)
-  const row3 = holdings.filter(h => h.row === 3)
+  const isRecent = (dateStr: string) => {
+    const updated = new Date(dateStr).getTime()
+    const hoursSince = (Date.now() - updated) / (1000 * 60 * 60)
+    return hoursSince >= 0 && hoursSince <= 48
+  }
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#0D1821', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
@@ -68,9 +98,9 @@ export default function Holdings() {
           .h-hero { padding-top: 80px !important; }
           .h-hero h1 { font-size: 48px !important; }
           .h-hero p { font-size: 19px !important; line-height: 30px !important; }
-          .h-row1 { grid-template-columns: 1fr !important; }
-          .h-row2 { grid-template-columns: 1fr !important; }
-          .h-row3 { grid-template-columns: 1fr !important; }
+          .board-row { grid-template-columns: 1.4fr 1fr !important; row-gap: 6px !important; }
+          .board-stage { display: none !important; }
+          .board-domain { grid-column: 1 / -1 !important; }
         }
       `}</style>
 
@@ -92,23 +122,71 @@ export default function Holdings() {
         <div style={{ borderTop: '0.5px solid #1a2a3a' }} />
       </div>
 
-      {/* Bento Grid */}
-      <div className="h-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 100px' }}>
-        <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Current Holdings</p>
-
-        {/* Row 1: Sorano 2/3 + Aegos 1/3 */}
-        <div className="h-row1" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '12px', marginBottom: '12px' }}>
-          {row1.map(h => <Card key={h.name} h={h} />)}
+      {/* Board */}
+      <div className="h-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '24px' }}>
+          <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em' }}>Live board</p>
+          <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.06em' }}>{holdings.length} brands tracked</p>
         </div>
 
-        {/* Row 2: three across */}
-        <div className="h-row2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px', marginBottom: '12px' }}>
-          {row2.map(h => <Card key={h.name} h={h} />)}
-        </div>
+        <div style={{ border: '0.5px solid #1a3050', borderRadius: '10px', overflow: 'hidden' }}>
+          {/* Header row */}
+          <div
+            className="board-row"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.6fr 1fr 1fr 1.2fr',
+              padding: '12px 24px',
+              borderBottom: '0.5px solid #1a3050',
+            }}
+          >
+            <span style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Brand</span>
+            <span style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Status</span>
+            <span className="board-stage" style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Stage</span>
+            <span className="board-domain" style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Destination</span>
+          </div>
 
-        {/* Row 3: three across */}
-        <div className="h-row3" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '12px' }}>
-          {row3.map(h => <Card key={h.name} h={h} />)}
+          {holdings.map((h, i) => {
+            const s = STATUS_STYLES[h.status as keyof typeof STATUS_STYLES]
+            const recent = isRecent(h.updatedAt)
+            return (
+              <a
+                key={h.name}
+                href={h.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block',
+                  textDecoration: 'none',
+                  padding: '18px 24px',
+                  borderBottom: i === holdings.length - 1 ? 'none' : '0.5px solid #16263a',
+                  transition: 'background-color 0.15s ease',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#0f1d2c')}
+                onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
+              >
+                <div className="board-row" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr 1.2fr', alignItems: 'center' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '16px', fontWeight: 700, color: '#f0f0f0' }}>
+                    {h.name}
+                    {recent && (
+                      <span
+                        title={`Updated ${h.updatedAt}`}
+                        style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#5ac8a8', flexShrink: 0 }}
+                      />
+                    )}
+                  </span>
+                  <span style={{ fontSize: '13px', fontWeight: 500, color: s.color, letterSpacing: '0.03em' }}>
+                    {s.label}
+                  </span>
+                  <span className="board-stage" style={{ fontSize: '13px', color: '#889' }}>{h.stage}</span>
+                  <span className="board-domain" style={{ fontSize: '13px', color: '#556', fontFamily: 'monospace' }}>{h.domain}</span>
+                </div>
+                <p style={{ fontSize: '14px', color: '#778', lineHeight: '1.55', fontWeight: 300, marginTop: '10px', maxWidth: '640px' }}>
+                  {h.description}
+                </p>
+              </a>
+            )
+          })}
         </div>
       </div>
 
