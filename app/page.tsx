@@ -2,51 +2,69 @@
 
 import Navbar from './components/Navbar'
 
+const STATUS_STYLES = {
+  live: { label: 'Live', color: '#5ac8a8' },
+  building: { label: 'Building', color: '#e0a458' },
+  parked: { label: 'Parked', color: '#666' },
+}
+
 export default function Home() {
-  const holdings = [
+  const board = [
     {
       name: 'TWO Docs',
       domain: 'two.so',
-      description: 'The doc app built for iPad and Mac. Beautiful, focused writing for creatives, solo operators, and small teams.',
-      tags: ['SaaS', 'B2B & B2C', 'In Beta'],
+      stage: 'Shipping',
+      status: 'live',
       href: 'https://www.two.so',
+      updatedAt: '2026-07-14',
     },
     {
       name: 'Sorano',
       domain: 'sorano.space',
-      description: 'Roadmap, changelog, and community votes for your product. Share what you are building, let users vote on what is next, publish a changelog when you ship.',
-      tags: ['SaaS', 'B2B', 'Startups', 'Live'],
+      stage: 'Shipping',
+      status: 'live',
       href: 'https://sorano.space',
+      updatedAt: '2026-06-20',
     },
     {
       name: 'Kiroka',
       domain: 'kiroka.xyz',
-      description: 'A curated directory of tools and products for indie builders and operators.',
-      tags: ['Directory', 'Live'],
+      stage: 'Daily drip',
+      status: 'building',
       href: 'https://app.kiroka.xyz',
+      updatedAt: '2026-07-15',
     },
     {
       name: 'Strevius',
       domain: 'strevius.com',
-      description: 'Studio and media group building services and brands across the web.',
-      tags: ['Studio', 'Media'],
+      stage: 'Dashboard',
+      status: 'building',
       href: 'https://strevius.com',
+      updatedAt: '2026-07-01',
     },
     {
       name: 'KiraPulse',
       domain: 'kirapulse.com',
-      description: 'Domain monitoring tool. Track availability, expiry, and changes across the domains that matter.',
-      tags: ['SaaS', 'B2B', 'In Progress'],
+      stage: 'In progress',
+      status: 'building',
       href: 'https://kirapulse.com',
+      updatedAt: '2026-06-10',
     },
     {
       name: 'Liyo',
       domain: 'liyo.co',
-      description: 'Studio and experiments arm. Building small internet projects on a hit-and-miss principle.',
-      tags: ['Studio'],
+      stage: 'Experiments',
+      status: 'parked',
       href: 'https://liyo.co',
+      updatedAt: '2026-04-02',
     },
   ]
+
+  const isRecent = (dateStr) => {
+    const updated = new Date(dateStr).getTime()
+    const hoursSince = (Date.now() - updated) / (1000 * 60 * 60)
+    return hoursSince >= 0 && hoursSince <= 48
+  }
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#0D1821', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
@@ -56,7 +74,9 @@ export default function Home() {
           .home-hero p { font-size: 24px !important; line-height: 36px !important; }
           .home-hero-cta { margin-top: 48px !important; }
           .home-section { padding-left: 24px !important; padding-right: 24px !important; }
-          .home-portfolio-grid { grid-template-columns: 1fr !important; }
+          .board-row { grid-template-columns: 1.4fr 1fr !important; row-gap: 6px !important; }
+          .board-stage { display: none !important; }
+          .board-domain { grid-column: 1 / -1 !important; }
         }
       `}</style>
 
@@ -78,59 +98,77 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Portfolio */}
+      {/* Board */}
       <div className="home-section" style={{ maxWidth: '980px', margin: '0 auto', padding: '80px 50px 120px' }}>
-        <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em', marginBottom: '40px' }}>Portfolio</p>
-        <div className="home-portfolio-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
-          {holdings.map((h) => (
-            <a
-              key={h.name}
-              href={h.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'block',
-                background: '#112233',
-                borderRadius: '10px',
-                padding: '28px',
-                border: '0.5px solid #1a3050',
-                textDecoration: 'none',
-                cursor: 'pointer',
-                transition: 'border-color 0.15s ease',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.borderColor = '#2a4a6a')}
-              onMouseLeave={e => (e.currentTarget.style.borderColor = '#1a3050')}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-                <span style={{ fontSize: '19px', fontWeight: 700, color: '#f0f0f0', fontFamily: 'Geist, Helvetica, Arial, sans-serif' }}>
-                  {h.name}
-                </span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-                  <path d="M2 12L12 2M12 2H5M12 2V9" stroke="#555" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <p style={{ fontSize: '13px', color: '#446', marginBottom: '14px' }}>{h.domain}</p>
-              <p style={{ fontSize: '16px', color: '#aaa', lineHeight: '1.55', fontWeight: 300 }}>{h.description}</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '20px' }}>
-                {h.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      fontSize: '11px',
-                      color: '#556',
-                      border: '0.5px solid #1a3050',
-                      borderRadius: '4px',
-                      padding: '3px 9px',
-                      letterSpacing: '0.05em',
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '24px' }}>
+          <p style={{ fontSize: '13px', color: '#555', letterSpacing: '0.08em' }}>Live board</p>
+          <p style={{ fontSize: '11px', color: '#444', letterSpacing: '0.06em' }}>{board.length} brands tracked</p>
         </div>
+
+        <div style={{ border: '0.5px solid #1a3050', borderRadius: '10px', overflow: 'hidden' }}>
+          {/* Header row */}
+          <div
+            className="board-row"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1.6fr 1fr 1fr 1.2fr',
+              padding: '12px 24px',
+              borderBottom: '0.5px solid #1a3050',
+            }}
+          >
+            <span style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Brand</span>
+            <span style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Status</span>
+            <span className="board-stage" style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Stage</span>
+            <span className="board-domain" style={{ fontSize: '11px', color: '#555', letterSpacing: '0.08em' }}>Destination</span>
+          </div>
+
+          {board.map((b, i) => {
+            const s = STATUS_STYLES[b.status]
+            const recent = isRecent(b.updatedAt)
+            return (
+              <a
+                key={b.name}
+                href={b.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="board-row"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1.6fr 1fr 1fr 1.2fr',
+                  alignItems: 'center',
+                  padding: '18px 24px',
+                  textDecoration: 'none',
+                  borderBottom: i === board.length - 1 ? 'none' : '0.5px solid #16263a',
+                  transition: 'background-color 0.15s ease',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#0f1d2c')}
+                onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
+              >
+                <span style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '16px', fontWeight: 700, color: '#f0f0f0' }}>
+                  {b.name}
+                  {recent && (
+                    <span
+                      title={`Updated ${b.updatedAt}`}
+                      style={{
+                        width: '6px',
+                        height: '6px',
+                        borderRadius: '50%',
+                        backgroundColor: '#5ac8a8',
+                        flexShrink: 0,
+                      }}
+                    />
+                  )}
+                </span>
+                <span style={{ fontSize: '13px', fontWeight: 500, color: s.color, letterSpacing: '0.03em' }}>
+                  {s.label}
+                </span>
+                <span className="board-stage" style={{ fontSize: '13px', color: '#889' }}>{b.stage}</span>
+                <span className="board-domain" style={{ fontSize: '13px', color: '#556', fontFamily: 'monospace' }}>{b.domain}</span>
+              </a>
+            )
+          })}
+        </div>
+
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '48px' }}>
           <a href="/holdings" style={{ fontSize: '20px', color: '#666', textDecoration: 'none', borderBottom: '1px solid #444', paddingBottom: '2px', letterSpacing: '0.08em' }}>
             View all holdings
