@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://www.ryokagroup.com/:path*",
-      "permanent": true
-    }
-  ]
-}
